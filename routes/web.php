@@ -10,3 +10,7 @@ Route::get('/consumir', 'PagesController@consumir')->name('consumir');
 /*-----------------------Rutas de las vistas del sistema---------------------*/
 
 Route::get('/listadoUsuarios', 'CrudController@listado')->name('listadoUsuarios');
+
+Route::get('/crearUsuario', 'CrudController@crear')->name('crearUsuario');
+
+Route::post('/cargarUsuario', 'CrudController@create')->name('create');

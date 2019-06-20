@@ -13,17 +13,23 @@ class Crud extends Model
   protected $client;
 
   public function __construct(){
-    $this -> client = new Client();
+    $this -> client = new Client([
+      'base_uri' => 'https://reqres.in/api/'
+    ]);
   }
   //Mandamos los parametros por POST
-    public function crear(){
-
+    public function crear($request){
+      $response = $this -> client -> request('POST', 'users',[
+        'name' => $request -> input('name'),
+        'job' => $request -> input('job')
+      ]);
+      return json_decode($response->getBody());
     }
     //Mandamos los parametros por GET
     public function leer(){
 
       //return $this -> client -> getMethod('GET', 'users/2');
-      $response = $this -> client -> request('GET', 'https://reqres.in/api/users?page=1');
+      $response = $this -> client -> request('GET', 'users?page=1');
       return json_decode($response -> getBody()->getContents());
 
     }
