@@ -28,4 +28,8 @@ route::post('/usuarioEditado{id}', 'CrudController@usuarioEditado')->name('usuar
 /*-----------------------Rutas del consumo y almacenamiento de interaccion con API---------------------*/
 Route::post('/buscarCodigo', 'ConsumirController@buscarCodigo')->name('buscarCodigo');
 
+Route::post('/guardarDireccion', 'ConsumirController@guardarDireccion')->name('guardarDireccion');
+
+Route::get('/listadoDirecciones', 'ConsumirController@listadoDirecciones')->name('listadoDirecciones');
+
 /*-----------------------Rutas del consumo y almacenamiento de interaccion con API---------------------*/

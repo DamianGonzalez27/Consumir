@@ -15,6 +15,10 @@ class CreateDireccionesTable extends Migration
     {
         Schema::create('direcciones', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('codigo_postal');
+            $table->string('municipio');
+            $table->string('estado');
+            $table->string('colonia');
             $table->timestamps();
         });
     }
