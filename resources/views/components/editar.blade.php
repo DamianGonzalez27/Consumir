@@ -3,6 +3,7 @@
     <h1>Seccion de editar usuario</h1>
     <hr>
     <p>Usuario: {{ $usuario -> data -> email }}</p>
+    <a href="{{ route('listadoUsuarios') }}" class="btn btn-primary">Regresar</a>
 
     <div class="card">
       <div class="card-header">

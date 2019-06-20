@@ -16,7 +16,7 @@ Route::get('/crearUsuario', 'CrudController@crear')->name('crearUsuario');
 
 Route::get('/editarUsuario{id}', 'CrudController@editarUsuario')->name('editarUsuario');
 
-Route::get('/eliminarUsuario{id}', 'CrudController@eliminar')->name('eliminarUsuario');
+Route::get('/eliminarUsuario{id}', 'CrudController@eliminarUsuario')->name('eliminarUsuario');
 
 Route::post('/cargarUsuario', 'CrudController@create')->name('create');
 
@@ -24,3 +24,8 @@ Route::get('/unicoUsuario{id}', 'CrudController@unicoUsuario')->name('unicoUsuar
 
 route::post('/usuarioEditado{id}', 'CrudController@usuarioEditado')->name('usuarioEditado');
 /*-----------------------Rutas de la interaccion con el API---------------------*/
+
+/*-----------------------Rutas del consumo y almacenamiento de interaccion con API---------------------*/
+Route::post('/buscarCodigo', 'ConsumirController@buscarCodigo')->name('buscarCodigo');
+
+/*-----------------------Rutas del consumo y almacenamiento de interaccion con API---------------------*/

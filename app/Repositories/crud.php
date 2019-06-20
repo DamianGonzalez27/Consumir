@@ -43,7 +43,8 @@ class Crud extends Model
       return json_decode($response -> getBody() -> getContents());
     }
     //Mandamos los parametros por POST
-    public function eliminar(){
-
+    public function eliminar($id){
+      return $response = $this -> client -> request('DELETE', 'users/'.$id);
+      //return json_decode($response -> getBody() -> getContents());
     }
 }
