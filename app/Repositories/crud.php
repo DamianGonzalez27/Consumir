@@ -31,11 +31,16 @@ class Crud extends Model
       //return $this -> client -> getMethod('GET', 'users/2');
       $response = $this -> client -> request('GET', 'users?page=1');
       return json_decode($response -> getBody()->getContents());
-
+    }
+    //Funcion para ver un unico Usuario
+    public function unico($id){
+      $response = $this -> client -> request('GET', 'users/'. $id);
+      return json_decode($response -> getBody() -> getContents());
     }
     //Mandamos los parametros por PUT
-    public function editar(){
-
+    public function editado($id){
+      $response = $this -> client -> request('PUT', 'users/'.$id);
+      return json_decode($response -> getBody() -> getContents());
     }
     //Mandamos los parametros por POST
     public function eliminar(){

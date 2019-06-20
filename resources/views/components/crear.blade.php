@@ -2,6 +2,8 @@
   @section('content')
     <h1>Esta pagina es para crear usuarios</h1>
     <hr>
+    <a href="{{ route('crud') }}" class="btn btn-primary">Regresar</a>
+    <hr>
     @if (session('usuario'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       <strong>{{ session('usuario') }}</strong>
